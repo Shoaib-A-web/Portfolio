@@ -1,0 +1,111 @@
+
+
+.container{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100%;
+    padding: 40px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    line-height: 60px;
+    background-color: rgba(88, 88, 224, 0.729);
+    
+}
+form {
+    display: flex;
+    gap: 10px;
+}
+
+form input[type="text"]{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: green;
+}
+form input[type="submit"]{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 189, 35);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+form input[type="submit"]:hover{
+   
+    background-color: rgb(231, 164, 6);
+}
+.icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-data{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.details{
+    display: flex;
+    gap:30px;
+}
+.details div {
+    background-color: white;
+    border-radius: 10px;
+    color: grey;
+    padding: 10px
+}
+
+/* Tablet Styles (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Give it some breathing room on the sides */
+        padding: 20px;
+        line-height: 40px;
+    }
+
+    .details {
+        gap: 15px;
+        flex-wrap: wrap; /* Wraps items if they don't fit in one line */
+        justify-content: center;
+    }
+}
+
+/* Mobile Styles (Screens smaller than 480px) */
+@media (max-width: 480px) {
+    * {
+        font-size: large; /* Slightly smaller text for small screens */
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    form {
+        flex-direction: column; /* Stacks input and button vertically */
+        width: 100%;
+    }
+
+    form input[type="text"], 
+    form input[type="submit"] {
+        width: 100%; /* Full width buttons/inputs */
+    }
+
+    .details {
+        flex-direction: column; /* Stack details (Humidity, Wind) vertically */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .details div {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,21 +1,28 @@
 const projects = [
   {
     title: 'Portfolio Website',
-    desc: 'Personal portfolio built with HTML, CSS and responsive design principles.',
+    desc: 'Personal portfolio built with HTML, CSS, React and responsive design principles.',
     tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'React',],
     color: '#7c5cfc',
+    repo: 'https://github.com/Shoaib-A-web/Portfolio',
+    url: '#home'
+    
   },
   {
-    title: 'UI Component Library',
-    desc: 'A collection of reusable UI components with clean, accessible design patterns.',
-    tags: ['CSS', 'Design', 'Accessibility'],
+    title: 'MasterJi a E-commerce Website',
+    desc: 'A responsive e-commerce website with clean, accessible design patterns. focusd on front-end development and user interface.',
+    tags: ['Html','CSS', 'JavaScript','Python','Django', 'Design', 'Accessibility'],
     color: '#fc5c9c',
+    repo: 'https://github.com/Shoaib-A-web/Masterji',
+    url: 'https://shoaibansari.pythonanywhere.com/shop/'
   },
   {
-    title: 'Landing Page Design',
-    desc: 'Modern landing page with animations, hover effects and mobile-first layout.',
-    tags: ['HTML', 'CSS', 'Animation'],
+    title: 'Weather Forcasting App',
+    desc: 'A weather forecasting app that provides real-time weather information and forecasts for any location. It features a clean and intuitive user interface, allowing users to easily access current weather conditions, hourly forecasts, and 7-day forecasts.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
     color: '#5cf0fc',
+    repo: 'https://github.com/Shoaib-A-web/Weath-app',
+    url: 'https://shoaib-a-web.github.io/Portfolio/weather/'
   },
 ]
 
@@ -63,11 +70,17 @@ export default function Projects() {
                 ))}
 
               </div>
-              <button className="w-full my-2 text-[11px] px-3 py-1 rounded-full font-medium tracking-wide border border-[rgba(255,255,255,0.1)] text-[#7a7890] hover:border-[#7a7890] hover:text-white transition-colors">
-                View Code
-              </button>
+              <div className="flex flex-col">
+                <a href={p.repo} target="_blank" rel="noopener noreferrer" className="w-full flex align-middle justify-center my-2 text-[11px] px-3 py-1 rounded-full font-medium tracking-wide border border-[rgba(255,255,255,0.1)] text-[#7a7890] hover:border-[#7a7890] hover:text-white transition-colors">
+                  View Code
+                </a>
+                <a href={p.url} target="_blank" rel="noopener noreferrer" className="w-full flex align-middle justify-center my-2 text-[11px] px-3 py-1 rounded-full font-medium tracking-wide border border-[rgba(255,255,255,0.1)] text-[#7a7890] hover:border-[#7a7890] hover:text-white transition-colors">
+                  View Live
+                </a>
+              </div>
             </div>
           ))}
+          <a href="" target="_blank">weather app</a>
         </div>
       </div>
     </section>
